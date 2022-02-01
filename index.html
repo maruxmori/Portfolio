@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"content="Portfolio web, presentación de María Laura Mori. Servicios de diseño, illustración y desarrollo web.">
+    <meta name="keywords"content="PORTFOLIO, DISEÑO, ILUSTRACIÓN">
+    <title>María Laura Mori | Design</title>
+
+    <!--FavIcon-->
+    <link rel="icon" href="./imagenes/favicon.ico" />
+
+    <!-- Iconos-->
+    <script src="https://kit.fontawesome.com/cfba0db7f6.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <div class="loader"></div>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        });
+    </script>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a aria-current="page" href="#work">Work</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav-redes">
+                    <li class="nav-item">
+                        <a href="https://www.behance.net/maralauramori" target="__blak">
+                            <span class="iconify" data-icon="eva:behance-fill"></span>
+                        </a>                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/maria-laura-mori/" target="__blak">
+                            <span class="iconify" data-icon="entypo-social:linkedin-with-circle">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/maruxmori" target="__blak">
+                        <span class="iconify" data-icon="akar-icons:github-fill"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://vimeo.com/user73913573" target="__blak">
+                            <span class="iconify" data-icon="whh:circlevimeo"></span>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <h1 class="inicio__titulo">María Laura Mori</h1>
+            <p class="inicio__sub">Diseño e ilustración</p>
+
+            <div class="inicio__flecha">
+                <a href="#work">
+                    <span class="iconify" data-icon="bi:arrow-down-short"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="work" class="container-fluid">
+            <div class="row projects">
+                <article class="titulo col-12 col-sm-6">
+                    <h2> works
+                        <br>
+                        <span>& projects</span>
+                    </h2>
+                </article>
+
+                <article class="projects__item col-12 col-sm-6">
+                    <div class="projects__item--texto">
+                        <h2>La esquina</h2>
+                        <h3>Branding</h3>
+                        <p>(Freelance)</p>
+                        <a href="https://www.behance.net/gallery/133232501/La-esquina-Branding" target="__blank" class="boton">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </article>
+    
+                <article class="projects__item col-6">
+                    <div class="projects__item--texto">
+                        <h2>Body Piercing</h2>
+                        <h3>Branding y RRSS</h3>
+                        <p>(Proyecto personal)</p>
+                        <a href="https://www.behance.net/gallery/125013421/Body-Piercing-Studio-Social-Media" target="__blank" class="boton">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </article>
+    
+                <article class="projects__item col-6">
+                    <div class="projects__item--texto">
+                        <h2>Estudio de tatuajes</h2>
+                        <h3>Branding y RRSS</h3>
+                        <p>(Proyecto personal)</p>
+                        <a href="https://www.behance.net/gallery/124345069/Tattoo-Studio-Social-Media" target="__blank" class="boton">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="projects__item  col-6">
+                    <div class="projects__item--texto">
+                        <h2>"TeamOn" App</h2>
+                        <h3>Proyecto UX</h3>
+                        <p>(Universidad de Buenos Aires)</p>
+                        <a href="https://vimeo.com/manage/videos/653903055" target="__blank" class="boton">
+                            <i class="fab fa-vimeo-v"></i>
+                        </a>
+                    </div>
+                </article>
+    
+                <article class="projects__item col-6">
+                    <div class="projects__item--texto"> 
+                        <h2>"Glow Nails"</h2>
+                        <h3>Diseño y maquetación</h3>
+                        <p>(CoderHouse)</p>
+                        <a href="https://github.com/maruxmori/glowNails_mori" target="__blank" class="boton">
+                            Repositorio
+                        </a>
+                        <a href="https://maruxmori.github.io/glowNails_mori/" target="__blank" class="boton">
+                            Sitio Web
+                        </a>
+                    </div>
+
+                </article>
+            </div> 
+        </section>
+
+        <section id="about" class="container-fluid" >
+                <article class="aboutMe row justify-content-center">
+                    <figure class="col-sd-12 col-md-6 aboutMe__info">
+                        <img src="./imagenes/avatar.jpg" alt="Avatar María Laura">
+                    </figure>
+                    <div class="col-sd-12 col-md-6 aboutMe__info">
+                        
+                        <h2>About me</h2>
+                        <h3>Mi nombre es Maru</h3>
+                        <p>Me dedico de manera freelance al diseño gráfico.
+                            <br>
+                            Constantemente sigo aprendiendo, y busco desarrollarme como Frontend.
+                            <br>
+                            Me gusta la ilustración digital.
+                            <br>
+                            Actualmente soy tutora de Desarrollo Web en <a href="https://www.coderhouse.com/" target="__blank">CoderHouse</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-sd-12 col-md-6 aboutMe__info">
+                        <h3 class="aboutMe__info--titulo">Educación</h3>
+                        <ul>
+                            <li> <strong> Diseño de Imagen y Sonido</strong></li>
+                            <li><em>Univerdidad de Buenos Aires</em> </li>
+                            <li>(en curso)</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Desarrollo web</strong></li>
+                            <li><em> Coderhouse </em></li>
+                            <li>(completo)</li>
+                         </ul>
+                    </div>
+
+                    <div class="col-sd-12 col-md-6 aboutMe__info">
+                        <h3 class="aboutMe__info--titulo">Habilidades</h3>
+                        <p> <strong>Diseño & Edición</strong> </p>
+                        <ul class="aboutMe__info--habilidades">
+                                <li><span class="iconify" data-icon="simple-icons:adobeillustrator"></span>
+                                </li>
+                                <li>
+                                    <span class="iconify" data-icon="simple-icons:adobephotoshop"></span>
+                                </li>
+                                <li>
+                                    <span class="iconify" data-icon="simple-icons:adobelightroom"></span>
+                                </li>
+                                <li>
+                                    <span class="iconify" data-icon="simple-icons:adobepremierepro"></span>
+                                </li>
+                                <li>
+                                    <span class="iconify" data-icon="simple-icons:adobeaftereffects"></span>
+                                </li>
+                                <li>
+                                    <span class="iconify" data-icon="akar-icons:figma-fill"></span>
+                                </li>
+                        </ul>
+                        <p> <strong>Desarrollo web </strong> </p>
+                        <ul class="aboutMe__info--habilidades">
+                                <li> <span class="iconify" data-icon="cib:html5"></span></li>
+                                <li> <span class="iconify" data-icon="fontisto:css3"></span></li>
+                                <li> <span class="iconify" data-icon="simple-icons:bootstrap"></span></li>
+                                <li> <span class="iconify" data-icon="cib:sass-alt"></span></li>
+                        </ul>
+                    </div>
+
+                </article>
+        </section>
+
+        <section id="contact" class="contacto">
+            <div class="contacto__texto">
+                <h2 class="contacto__texto--titulo"> Contact</h2>
+                <h3 class="contacto__texto--sub">¡Enviame tu mensaje o proyecto!</h3>
+
+                <form action="" method="post">
+                    <div>
+                        <label for="nombre"></label>
+                        <input class="campos" type="text" name="nombre" placeholder="Tu nombre o apodo" required>
+                    </div>
+                    <div>
+                        <label for="mail"></label>
+                        <input class="campos" type="email" name="mail" placeholder="xxx@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="mensaje"></label>
+                        <textarea class="campos" name="mensaje" id="" cols="30" rows="6" placeholder="Tu mensaje" required></textarea>
+                    </div>
+                        <input type="submit" value="Enviar" id="botonForm"/>
+                </form> 
+            </div>
+
+            <figure class="contacto__imagen">
+                <img src="./imagenes/contacto.png" alt="Gracias por tu visita">
+            </figure>
+                         
+        </section>
+        
+    </main>
+    <footer class="footer">
+        <ul class="footer__nav">
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="footer__redes">
+            <li>
+                <a href="https://www.behance.net/maralauramori" target="__blak">
+                    <span class="iconify" data-icon="eva:behance-fill"></span>
+                </a></li>
+            <li>
+                 <a href="https://www.linkedin.com/in/maria-laura-mori/" target="__blak">
+                    <span class="iconify" data-icon="entypo-social:linkedin-with-circle">
+                    </span>
+                </a></li>
+            <li>
+                <a href="https://github.com/maruxmori" target="__blak">
+                <span class="iconify" data-icon="akar-icons:github-fill"></span>
+                </a></li>
+            <li>
+                <a href="https://vimeo.com/user73913573" target="__blak">
+                    <span class="iconify" data-icon="whh:circlevimeo"></span>
+                </a></li>
+        </ul>
+        <ul class="redes__info">
+            <li><a href="mailto:marialauraxmori@gmail.com">marialauraxmori@gmail.com</a></li>
+            <li><a href="tel:+5401150632347">1150632347</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
