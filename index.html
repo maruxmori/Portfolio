@@ -23,16 +23,7 @@
 <body>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <div class="loader"></div>
-    <script type="text/javascript">
-        $(window).load(function() {
-            $(".loader").fadeOut("slow");
-        });
-    </script>
-    
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
@@ -76,7 +67,7 @@
                 </ul>
               </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
     <main>
@@ -162,67 +153,81 @@
         </section>
 
         <section id="about" class="container-fluid" >
-                <article class="aboutMe row justify-content-center">
-                    <figure class="col-sd-12 col-md-6 aboutMe__info">
-                        <img src="./imagenes/avatar.jpg" alt="Avatar María Laura">
-                    </figure>
-                    <div class="col-sd-12 col-md-6 aboutMe__info">
-                        
-                        <h2>About me</h2>
-                        <h3>Mi nombre es Maru</h3>
-                        <p>Me dedico de manera freelance al diseño gráfico.
-                            <br>
-                            Constantemente sigo aprendiendo, y busco desarrollarme como Frontend.
-                            <br>
-                            Me gusta la ilustración digital.
-                            <br>
-                            Actualmente soy tutora de Desarrollo Web en <a href="https://www.coderhouse.com/" target="__blank">CoderHouse</a>.
-                        </p>
+                <article class="aboutMe row">
+                    <div class="col-sd-12 col-md-6 aboutMe__avatar">
+                        <img src="./imagenes/avatar.jpg" alt="Avatar María Laura" class="aboutMe__avatar--imagen">
                     </div>
+                    <div class="col-sd-12 col-md-6 aboutMe__info">  
+                        <div class="aboutMe__info--texto">           
+                            <h2>About me</h2>
+                            <h3>Mi nombre es Maru</h3>
+                            <p>Me dedico de manera freelance al diseño gráfico.
+                                <br>
+                                Constantemente sigo aprendiendo, y busco desarrollarme como Frontend.
+                                <br>
+                                Me gusta la ilustración digital.
+                                <br>
+                                Actualmente soy tutora de Desarrollo Web en <a href="https://www.coderhouse.com/" target="__blank">CoderHouse</a>.
+                            </p>
+                        </div>
 
-                    <div class="col-sd-12 col-md-6 aboutMe__info">
-                        <h3 class="aboutMe__info--titulo">Educación</h3>
-                        <ul>
-                            <li> <strong> Diseño de Imagen y Sonido</strong></li>
-                            <li><em>Univerdidad de Buenos Aires</em> </li>
-                            <li>(en curso)</li>
-                        </ul>
-                        <ul>
-                            <li><strong>Desarrollo web</strong></li>
-                            <li><em> Coderhouse </em></li>
-                            <li>(completo)</li>
-                         </ul>
-                    </div>
-
-                    <div class="col-sd-12 col-md-6 aboutMe__info">
-                        <h3 class="aboutMe__info--titulo">Habilidades</h3>
-                        <p> <strong>Diseño & Edición</strong> </p>
-                        <ul class="aboutMe__info--habilidades">
-                                <li><span class="iconify" data-icon="simple-icons:adobeillustrator"></span>
-                                </li>
-                                <li>
-                                    <span class="iconify" data-icon="simple-icons:adobephotoshop"></span>
-                                </li>
-                                <li>
-                                    <span class="iconify" data-icon="simple-icons:adobelightroom"></span>
-                                </li>
-                                <li>
-                                    <span class="iconify" data-icon="simple-icons:adobepremierepro"></span>
-                                </li>
-                                <li>
-                                    <span class="iconify" data-icon="simple-icons:adobeaftereffects"></span>
-                                </li>
-                                <li>
-                                    <span class="iconify" data-icon="akar-icons:figma-fill"></span>
-                                </li>
-                        </ul>
-                        <p> <strong>Desarrollo web </strong> </p>
-                        <ul class="aboutMe__info--habilidades">
-                                <li> <span class="iconify" data-icon="cib:html5"></span></li>
-                                <li> <span class="iconify" data-icon="fontisto:css3"></span></li>
-                                <li> <span class="iconify" data-icon="simple-icons:bootstrap"></span></li>
-                                <li> <span class="iconify" data-icon="cib:sass-alt"></span></li>
-                        </ul>
+                        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <h3 >Educación</h3>
+                                    <ul>
+                                        <li> <strong> Diseño de Imagen y Sonido</strong></li>
+                                        <li><em>Univerdidad de Buenos Aires</em> </li>
+                                        <li>(en curso)</li>
+                                    </ul>
+                                    <ul>
+                                        <li><strong>Desarrollo web</strong></li>
+                                        <li><em> Coderhouse </em></li>
+                                        <li>(completo)</li>
+                                     </ul>
+                              </div>
+                              <div class="carousel-item">
+                                    <h3>Habilidades</h3>
+                                    <p> Diseño & Edición </p>
+                                    <ul class="iconos-diseño">
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Adobe Illustrator">
+                                            <span class="iconify" data-icon="simple-icons:adobeillustrator"></span>
+                                        </li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Adobe Photoshop">
+                                            <span class="iconify" data-icon="simple-icons:adobephotoshop"></span>
+                                        </li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Adobe Lightroom">
+                                            <span class="iconify" data-icon="simple-icons:adobelightroom"></span>
+                                        </li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Adobe Premiere Pro">
+                                            <span class="iconify" data-icon="simple-icons:adobepremierepro"></span>
+                                        </li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Adobe After Effects">
+                                            <span class="iconify" data-icon="simple-icons:adobeaftereffects"></span>
+                                        </li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Figma">
+                                            <span class="iconify" data-icon="akar-icons:figma-fill"></span>
+                                        </li>
+                                    </ul>
+                                    <p> Desarrollo web </p>
+                                    <ul class="iconos-diseño">
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="HTML5"> 
+                                            <span class="iconify" data-icon="cib:html5"></span>
+                                        </li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="CSS3"> 
+                                            <span class="iconify" data-icon="fontisto:css3"></span></li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Bootstrap v5.0">
+                                            <span class="iconify" data-icon="simple-icons:bootstrap"></span></li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Sass">
+                                            <span class="iconify" data-icon="cib:sass-alt"></span></li>
+                                    </ul>
+                              </div>
+                            </div>
+                        </div>
                     </div>
 
                 </article>
@@ -251,7 +256,7 @@
             </div>
 
             <figure class="contacto__imagen">
-                <img src="./imagenes/contacto.png" alt="Gracias por tu visita">
+                <img src="./imagenes/contacto.png" alt="Gracias por tu visita" class="contacto__imagen--gracias">
             </figure>
                          
         </section>
@@ -288,5 +293,14 @@
             <li><a href="tel:+5401150632347">1150632347</a></li>
         </ul>
     </footer>
+
+     <!-- JQuery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+     <div class="loader"></div>
+     <script type="text/javascript">
+         $(window).load(function() {
+             $(".loader").fadeOut("slow");
+         });
+     </script>
 </body>
 </html>

@@ -30,6 +30,11 @@ a{
     text-decoration: none;
     color: #0114C0;
 }
+.row, .container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+}
 /*-------- Home -----------*/
 
 /*-------- Navegación, menú hamburguesa -----------*/
@@ -92,10 +97,6 @@ h2{
     font-size: 4em;
     font-weight:900;
 }
-span{
-    font-size: 0.7em;
-    font-weight: 400;
-}
 .titulo{
     display: flex;
     flex-direction: column;
@@ -147,9 +148,8 @@ span{
 }
 
 /* ------------- ABOUT ------------ */
-.aboutMe{
-    margin-top: 20em;
-    margin-bottom: 5em;
+.aboutMe__avatar{
+    padding: 0;
 }
 .aboutMe__info{
     display: flex;
@@ -159,14 +159,24 @@ span{
     flex-direction: column;
     margin-top: 2em;
 }
-.aboutMe__info--habilidades{
+.aboutMe__avatar--imagen{
+    width: 100%;
+}
+.iconos-diseño{
     display: flex;
     flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
-figure img{
-    width: 15em;
-    height: auto;
-    border-radius: 50em;
+.iconos-diseño > span{
+background-color: red;
+width: 20px;
+height: 200px;
+}
+.carousel{
+    height: 50vh;
+    display: flex;
+    align-items: center;
 }
 .iconify{
     font-size: 2em;
@@ -186,6 +196,12 @@ figure img{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 1em;
+}
+.contacto__imagen--gracias{
+    width: 70vw;
+    height: auto;
+    border-radius: 50em;
 }
 .contacto__texto--titulo{
     font-size: 4em;
@@ -259,10 +275,6 @@ padding-left: 1em;
     .projects__item{
         height: 100vh;
     }
-    figure img{
-        width: 18em;
-        height: auto;
-    }
     #contact{
         flex-direction: row;
         height: 80vh;
@@ -270,9 +282,11 @@ padding-left: 1em;
     .campos{
         width: 100%;
     }
+    .contacto__imagen--gracias{
+        width: 50vh;
+    }
     .footer{
-        flex-direction: row;
-        justify-content: space-around;
+        height: 30vh;
     }
     .footer__nav{
         display: flex;
@@ -285,11 +299,14 @@ padding-left: 1em;
 /*---------- Responsive desktop --------*/
 
 @media only screen and (min-width: 992px) {
-    figure img{
-        width: 25em;
-        height: auto;
-    }
     .footer{
         height: 20vh;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contacto__imagen--gracias{
+        width: 60vh;
+        height: auto;
+        border-radius: 50em;
     }
 }
