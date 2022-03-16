@@ -14,15 +14,24 @@
     <!-- Iconos-->
     <script src="https://kit.fontawesome.com/cfba0db7f6.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-     <!-- Bootstrap CSS -->
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <!-- AOS Animaciones-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Mi CSS-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- AOS Animaciones -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once:true,
+      });
+    </script>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light ">
@@ -71,10 +80,9 @@
     </header>
 
     <main>
-        <section id="inicio" class="inicio">
+        <section id="inicio" class="inicio tracking-in-expand">
             <h1 class="inicio__titulo">María Laura Mori</h1>
             <p class="inicio__sub">Diseño e ilustración</p>
-
             <div class="inicio__flecha">
                 <a href="#work">
                     <span class="iconify" data-icon="bi:arrow-down-short"></span>
@@ -85,13 +93,13 @@
         <section id="work" class="container-fluid">
             <div class="row projects">
                 <article class="titulo col-12 col-sm-6">
-                    <h2> works
+                    <h2 class="tracking-in-expand" data-aos="fade-up"> works
                         <br>
                         <span>& projects</span>
                     </h2>
                 </article>
 
-                <article class="projects__item col-12 col-sm-6">
+                <article class="projects__item col-12 col-sm-6" data-aos="fade-up" id="esquina">
                     <div class="projects__item--texto">
                         <h2>La esquina</h2>
                         <h3>Branding</h3>
@@ -102,7 +110,7 @@
                     </div>
                 </article>
     
-                <article class="projects__item col-6">
+                <article class="projects__item col-6" data-aos="fade-up" id="piercing">
                     <div class="projects__item--texto">
                         <h2>Body Piercing</h2>
                         <h3>Branding y RRSS</h3>
@@ -113,7 +121,7 @@
                     </div>
                 </article>
     
-                <article class="projects__item col-6">
+                <article class="projects__item col-6" data-aos="fade-up" id="tattoo">
                     <div class="projects__item--texto">
                         <h2>Estudio de tatuajes</h2>
                         <h3>Branding y RRSS</h3>
@@ -124,7 +132,7 @@
                     </div>
                 </article>
                 
-                <article class="projects__item  col-6">
+                <article class="projects__item  col-6" data-aos="fade-up" id="teamOn-app">
                     <div class="projects__item--texto">
                         <h2>"TeamOn" App</h2>
                         <h3>Proyecto UX</h3>
@@ -132,18 +140,27 @@
                         <a href="https://vimeo.com/manage/videos/653903055" target="__blank" class="boton">
                             <i class="fab fa-vimeo-v"></i>
                         </a>
+                        <a href="https://www.figma.com/proto/aS1HxDFmjf8hH86BLl8kqV/prototipo-e-sports?node-id=225%3A516&scaling=scale-down&page-id=225%3A433&starting-point-node-id=225%3A516&show-proto-sidebar=1" target="__blank" class="boton">
+                            <span class="iconify" data-icon="fa-brands:figma"></span>
+                            Prototipo
+                        </a>
+                        <a href="https://drive.google.com/file/d/1SDLRWWD9iZve8i1LOHLA21hDHFj6u4iZ/view?usp=sharing" target="__blank" class="boton">
+                            <span class="iconify" data-icon="ei:external-link"></span>
+                            Proyecto
+                        </a>
                     </div>
                 </article>
     
-                <article class="projects__item col-6">
+                <article class="projects__item col-6" data-aos="fade-up" id="glow-web">
                     <div class="projects__item--texto"> 
                         <h2>"Glow Nails"</h2>
                         <h3>Diseño y maquetación</h3>
                         <p>(CoderHouse)</p>
                         <a href="https://github.com/maruxmori/glowNails_mori" target="__blank" class="boton">
-                            Repositorio
+                            <span class="iconify" data-icon="ei:sc-github"></span>
                         </a>
                         <a href="https://maruxmori.github.io/glowNails_mori/" target="__blank" class="boton">
+                            <span class="iconify" data-icon="ei:external-link"></span>
                             Sitio Web
                         </a>
                     </div>
@@ -154,11 +171,11 @@
 
         <section id="about" class="container-fluid" >
                 <article class="aboutMe row">
-                    <div class="col-sd-12 col-md-6 aboutMe__avatar">
-                        <img src="./imagenes/avatar.jpg" alt="Avatar María Laura" class="aboutMe__avatar--imagen">
+                    <div class="col-sd-12 col-md-6 aboutMe__avatar" data-aos="fade-up">
+                        <img src="./imagenes/avatar.jpg" loading="lazy" alt="Avatar María Laura" class="aboutMe__avatar--imagen">
                     </div>
                     <div class="col-sd-12 col-md-6 aboutMe__info">  
-                        <div class="aboutMe__info--texto">           
+                        <div class="aboutMe__info--texto" data-aos="fade-up">           
                             <h2>About me</h2>
                             <h3>Mi nombre es Maru</h3>
                             <p>Me dedico de manera freelance al diseño gráfico.
@@ -167,30 +184,17 @@
                                 <br>
                                 Me gusta la ilustración digital.
                                 <br>
-                                Actualmente soy tutora de Desarrollo Web en <a href="https://www.coderhouse.com/" target="__blank">CoderHouse</a>.
+                                Actualmente soy tutora de Desarrollo Web en <a href="https://www.coderhouse.com/" target="__blank"><span class="iconify" data-icon="ei:external-link"></span>CoderHouse</a>.
                             </p>
                         </div>
 
-                        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+                        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel" data-aos="fade-up">
                             <div class="carousel-indicators">
                               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             </div>
                             <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <h3 >Educación</h3>
-                                    <ul>
-                                        <li> <strong> Diseño de Imagen y Sonido</strong></li>
-                                        <li><em>Univerdidad de Buenos Aires</em> </li>
-                                        <li>(en curso)</li>
-                                    </ul>
-                                    <ul>
-                                        <li><strong>Desarrollo web</strong></li>
-                                        <li><em> Coderhouse </em></li>
-                                        <li>(completo)</li>
-                                     </ul>
-                              </div>
-                              <div class="carousel-item">
+                                <div class="carousel-item active">
                                     <h3>Habilidades</h3>
                                     <p> Diseño & Edición </p>
                                     <ul class="iconos-diseño">
@@ -224,8 +228,26 @@
                                             <span class="iconify" data-icon="simple-icons:bootstrap"></span></li>
                                         <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Sass">
                                             <span class="iconify" data-icon="cib:sass-alt"></span></li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="GIT">
+                                            <span class="iconify" data-icon="bi:git"></span></li>
+                                        <li class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Github">
+                                            <span class="iconify" data-icon="akar-icons:github-fill"></span></li>
                                     </ul>
                               </div>
+                              <div class="carousel-item">
+                                <h3 >Educación</h3>
+                                    <ul>
+                                        <li> <strong> Diseño de Imagen y Sonido</strong></li>
+                                        <li><em>Universidad de Buenos Aires</em> </li>
+                                        <li>(en curso)</li>
+                                    </ul>
+                                    <ul>
+                                        <li><strong>Desarrollo web</strong></li>
+                                        <li><em> Coderhouse </em></li>
+                                        <li>(completo)</li>
+                                     </ul>
+                              </div>
+                              
                             </div>
                         </div>
                     </div>
@@ -233,32 +255,33 @@
                 </article>
         </section>
 
-        <section id="contact" class="contacto">
-            <div class="contacto__texto">
-                <h2 class="contacto__texto--titulo"> Contact</h2>
-                <h3 class="contacto__texto--sub">¡Enviame tu mensaje o proyecto!</h3>
-
-                <form action="" method="post">
-                    <div>
-                        <label for="nombre"></label>
-                        <input class="campos" type="text" name="nombre" placeholder="Tu nombre o apodo" required>
-                    </div>
-                    <div>
-                        <label for="mail"></label>
-                        <input class="campos" type="email" name="mail" placeholder="xxx@gmail.com" required>
-                    </div>
-                    <div>
-                        <label for="mensaje"></label>
-                        <textarea class="campos" name="mensaje" id="" cols="30" rows="6" placeholder="Tu mensaje" required></textarea>
-                    </div>
-                        <input type="submit" value="Enviar" id="botonForm"/>
-                </form> 
-            </div>
-
-            <figure class="contacto__imagen">
-                <img src="./imagenes/contacto.png" alt="Gracias por tu visita" class="contacto__imagen--gracias">
-            </figure>
-                         
+        <section id="contact" class="contacto container-fluid">
+            <div class="row">
+                <div class="contacto__texto col-sd-12 col-md-6" data-aos="fade-up">
+                    <h2 class="contacto__texto--titulo"> Contact</h2>
+                    <h3 class="contacto__texto--sub">¡Enviame tu mensaje o proyecto!</h3>
+    
+                    <form action="" method="post">
+                        <div>
+                            <label for="nombre"></label>
+                            <input class="campos" type="text" name="nombre" placeholder="Tu nombre o apodo" required>
+                        </div>
+                        <div>
+                            <label for="mail"></label>
+                            <input class="campos" type="email" name="mail" placeholder="xxx@gmail.com" required>
+                        </div>
+                        <div>
+                            <label for="mensaje"></label>
+                            <textarea class="campos" name="mensaje" id="" cols="30" rows="6" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                            <input type="submit" value="Enviar" id="botonForm"/>
+                    </form> 
+                </div>
+    
+                <figure class="contacto__imagen col-sd-12 col-md-6" data-aos="fade-up">
+                    <img src="./imagenes/contacto.png" loading="lazy" alt="Gracias por tu visita" class="contacto__imagen--gracias">
+                </figure>
+            </div>             
         </section>
         
     </main>
@@ -272,7 +295,7 @@
         <ul class="footer__redes">
             <li>
                 <a href="https://www.behance.net/maralauramori" target="__blak">
-                    <span class="iconify" data-icon="eva:behance-fill"></span>
+                    <span class="iconify" data-icon="ant-design:behance-circle-filled"></span>
                 </a></li>
             <li>
                  <a href="https://www.linkedin.com/in/maria-laura-mori/" target="__blak">
@@ -289,8 +312,8 @@
                 </a></li>
         </ul>
         <ul class="redes__info">
-            <li><a href="mailto:marialauraxmori@gmail.com">marialauraxmori@gmail.com</a></li>
-            <li><a href="tel:+5401150632347">1150632347</a></li>
+            <li><a href="mailto:marialauraxmori@gmail.com"> <span class="iconify" data-icon="ei:envelope"></span>marialauraxmori@gmail.com</a></li>
+            <li><a href="tel:+5401150632347"> <span class="iconify" data-icon="clarity:mobile-phone-line"></span>1150632347</a></li>
         </ul>
     </footer>
 

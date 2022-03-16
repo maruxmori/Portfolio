@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Jost:wght@900&family=Work+Sans:wght@900&display=swap');
 
-/*---- Generales ----*/
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url('images/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+    background: url(../imagenes/loading-4.gif) 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
 }
 ul{
@@ -31,13 +31,12 @@ a{
     color: #0114C0;
 }
 .row, .container-fluid{
-    padding-right: 0;
-    padding-left: 0;
+    padding:0;
     margin: 0;
+    width: 100%;
 }
-/*-------- Home -----------*/
 
-/*-------- Navegación, menú hamburguesa -----------*/
+/*--------------------- Navegación, menú hamburguesa ------------------------*/
 .navbar-light{
     display: flex;
     justify-content: space-between;
@@ -55,6 +54,10 @@ nav ul{
     margin: 1em;
     font-size: 1.5em;
     color: #0114C0;
+    transition: ease-in-out .3s;
+}
+.nav-item:hover{
+    transform: translateY(-3px)
 }
 .collapse-show{
     background-color: #f5f4fd;
@@ -63,6 +66,9 @@ nav ul{
     display: flex;
     align-items: center;
 }
+
+/*---------------------------- Home ---------------------------*/
+
 .inicio{
     display: flex;
     align-items: center;
@@ -75,6 +81,7 @@ nav ul{
     font-weight: 800;
     font-size: 2em;
     text-align: center;
+    font-family: 'Jost', sans-serif;
 }
 .inicio__sub{
     text-align: center;
@@ -84,11 +91,12 @@ nav ul{
     align-content: flex-end;
     justify-content: center;
     font-size: 0.5em;
+    scroll-behavior: smooth;
 }
 a .iconify{
     font-size: 1.2em;
 }
-/*-------------- WORK ------------*/
+/*--------------------------- WORK -------------------------*/
 h2{
     font-size: 2em;
     font-weight:900;
@@ -111,9 +119,11 @@ h2{
     background-repeat: no-repeat;
     background-size: contain;
     padding: 0;
+    color: #f5f4fd;
+    transition: ease-in-out 0.1s;
 }
 .projects__item:hover{
-    background: rgba(255, 255, 255, 0.418);
+    background-color: #f5f4fd;
     transition: ease-in-out 0.1s;
 }
 .projects__item--texto{
@@ -127,15 +137,16 @@ h2{
     opacity: 0;
 }
 .projects__item--texto:hover{
+    background-color: #0d1986be;
     opacity: 1;
-    transition: ease-in-out 0.1s;
 }
 .boton{
     background-color: #f5f4fd;
     box-shadow: 1px 1px 10px #dbaea58c;
     border-radius: 0.5rem;
     padding: 0.7em;
-    margin: 00.5em;
+    margin: 0.5em;
+    transition: ease-in-out 0.2s;
 }
 .boton:hover{
     background-color: #ffffff;
@@ -146,8 +157,34 @@ h2{
     color:#ffffff;
     box-shadow: 3px 3px 20px #dbaea58c;
 }
-
-/* ------------- ABOUT ------------ */
+.projects__item--texto .boton{
+    box-shadow: 1px 1px 15px #8685e4a1;
+}
+.projects__item--texto .boton:hover{
+    box-shadow: 3px 4px 20px #8785e4a1;
+    transform: translateY(-2px);
+}
+#esquina:hover{
+    background-image: url(../imagenes/hover_esquina_img.jpg);
+    background-size: cover;
+}
+#tattoo:hover{
+    background-image: url(../imagenes/hover_tattoo_img.jpg);
+    background-size: cover;
+}
+#piercing:hover{
+    background-image: url(../imagenes/hover_piercing_img.jpg);
+    background-size: cover;
+}
+#teamOn-app:hover{
+    background-image: url(../imagenes/hover_teamOn_img.jpg);
+    background-size: cover;
+}
+#glow-web:hover{
+    background-image: url(../imagenes/hover_web_img_3.png);
+    background-size: cover;
+}
+/* -------------------------- ABOUT ------------------------- */
 .aboutMe__avatar{
     padding: 0;
 }
@@ -168,10 +205,19 @@ h2{
     align-content: center;
     justify-content: center;
 }
-.iconos-diseño > span{
-background-color: red;
-width: 20px;
-height: 200px;
+.iconos-diseño li{
+    transition: ease-in-out .3s;
+}
+.iconos-diseño li:hover{
+    transform: translateY(-3px);
+    border-bottom: #020f839d;
+}
+.iconos-diseño .iconify{
+    width: 100%;
+    transition: ease-in-out;
+}
+.iconos-diseño .iconify:hover{
+    color: #5c6cfc;
 }
 .carousel{
     height: 50vh;
@@ -182,7 +228,7 @@ height: 200px;
     font-size: 2em;
     margin: 0.2em;
 }
-/*------------- CONTACT ------------*/
+/*------------------------------- CONTACT -------------------*/
 
 .contacto{
     background-color: rgba(255, 255, 255, 0.6);
@@ -195,13 +241,16 @@ height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 1em;
+}
+.contacto__imagen{
+    padding: 0;
+    margin: 0;
 }
 .contacto__imagen--gracias{
-    width: 70vw;
+    width: 100%;
     height: auto;
-    border-radius: 50em;
 }
 .contacto__texto--titulo{
     font-size: 4em;
@@ -239,6 +288,7 @@ padding-left: 1em;
     border: none;
     border-radius: 0.5rem;
     padding: 0.7em;
+    transition: ease-in-out 0.2s;
 }
 #botonForm:hover{
     background-color: #ffffff;
@@ -250,7 +300,7 @@ padding-left: 1em;
     box-shadow: 3px 3px 20px #dbaea58c;
 }
 
-/*---- Footer ----*/
+/*---------------------- Footer ---------------------*/
 .footer{
     display: flex;
     justify-content: center;
@@ -258,32 +308,97 @@ padding-left: 1em;
     flex-direction: column;
     text-align: center;
 }
-.footer__nav a{
+.footer__nav li{
     margin: 0.8em;
+    transition: ease-in-out .3s;
+}
+.footer__nav li:hover{
+    transform: translateY(-3px);
 }
 .footer__redes{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+.footer__redes li{
+    transition: ease-in-out .3s;
+}
+.footer__redes li:hover{
+    transform: translateY(-3px)
+}
 .footer__redes .iconify{
     font-size: 2.5em;
 }
 
-/*---------- Responsive tablet --------*/
+/*-------------------------------------------- Animaciones ------------------------------------------*/  
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+}
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+}
+@keyframes tracking-in-expand {
+      0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+}
+
+.slide-top {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+}
+@keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+}
+  
+/*----------------------- Responsive tablet ---------------------*/
 @media only screen and (min-width: 768px) {
     .projects__item{
         height: 100vh;
     }
-    #contact{
-        flex-direction: row;
-        height: 80vh;
+    .projects__item--texto{
+        font-size: 1.5em;
+    }
+    .projects__item--texto a{
+        font-size: 0.7em;
     }
     .campos{
         width: 100%;
-    }
-    .contacto__imagen--gracias{
-        width: 50vh;
     }
     .footer{
         height: 30vh;
@@ -296,17 +411,12 @@ padding-left: 1em;
     }
 }
 
-/*---------- Responsive desktop --------*/
+/*----------------------- Responsive desktop ---------------------*/
 
 @media only screen and (min-width: 992px) {
     .footer{
-        height: 20vh;
+       /* height: 20vh;*/
         flex-direction: row;
         justify-content: space-around;
-    }
-    .contacto__imagen--gracias{
-        width: 60vh;
-        height: auto;
-        border-radius: 50em;
     }
 }
